@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT Plus",
+    "description": "Powerful all-in-one AI assistant for writing, coding, research, and creative tasks with advanced models and higher limits.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["GPT-4o access", "Image & voice generation", "Web browsing", "Advanced data analysis", "Priority speed"],
+    "icon": "https://tse4.mm.bing.net/th/id/OIP.bkXS1D5AwVLgLc4kCbT4xQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 2,
+    "name": "Claude Pro",
+    "description": "Best for deep reasoning, long-document analysis, coding, and safe, high-quality content creation.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["200K context window", "Artifact creation", "Projects & knowledge base", "Superior writing quality", "Code interpreter"],
+    "icon": "https://th.bing.com/th/id/OIP.eyE584RWOiudHg96S6mujAHaEK?w=277&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  },
+  {
+    "id": 3,
+    "name": "Grok",
+    "description": "Truth-seeking AI by xAI with real-time knowledge, humor, and strong reasoning capabilities.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Real-time X integration", "Fun & uncensored responses", "Image analysis", "Strong STEM reasoning", "Free access on X"],
+    "icon": "data:image/webp;base64,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"
+  },
+  {
+    "id": 4,
+    "name": "Midjourney",
+    "description": "Industry-leading AI art generator known for stunning, artistic, and highly detailed images.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["V6 model", "High-quality upscaling", "Style references", "Remix & variations", "Community showcase"],
+    "icon": "https://th.bing.com/th/id/OIP.Lt_ck6CmtPnfI1tXDfPTDQHaHa?w=165&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  },
+  {
+    "id": 5,
+    "name": "Perplexity Pro",
+    "description": "AI-powered search engine that delivers accurate, cited answers with real-time web access.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Unlimited Pro searches", "Multiple AI models", "File & image upload", "Voice mode", "Collections & libraries"],
+    "icon": "https://th.bing.com/th/id/OIP.1TvlFQnZQ0qD20nl04Be5gHaHa?w=183&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  },
+  {
+    "id": 6,
+    "name": "Gemini Advanced",
+    "description": "Google's multimodal AI with deep integration into Workspace, excellent for research and productivity.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["1M token context", "Native Google integration", "Image & video understanding", "Gemini 2.5 Pro", "Advanced coding help"],
+    "icon": "https://th.bing.com/th/id/OIP.Vw9z46dJDwbr2FN39EyaEwHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  },
+  {
+    "id": 7,
+    "name": "Canva Pro",
+    "description": "All-in-one design platform with powerful AI tools for Magic Studio, image editing, and brand kits.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Magic Design", "Background remover", "Text to image", "Brand Kit", "One-click resize", "Unlimited storage"],
+    "icon": "https://th.bing.com/th/id/OIP.jfJEgnoX3e26baaZXknaOwHaFj?w=195&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  },
+  {
+    "id": 8,
+    "name": "Looka",
+    "description": "AI logo and complete brand identity generator that creates professional logos and brand assets instantly.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["AI logo generator", "Brand kit creation", "Social media templates", "Website builder", "Unlimited downloads (free tier)"],
+    "icon": "https://th.bing.com/th/id/OIP.AHCeNHHM34iZ0SQpuEvRygHaHa?w=155&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+  }
+]
