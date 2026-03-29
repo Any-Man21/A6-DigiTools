@@ -7,6 +7,8 @@ import Productsp from "./Productsp";
 import ThreeSteps from "./components/ThreeSteps";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+import { useState } from "react";
 
 const getModels = async () => {
   const res = await fetch("/models.json");
@@ -16,6 +18,11 @@ const getModels = async () => {
 const modelPromise = getModels();
 
 function App() {
+  const [activeTab, setActiveTab] = useState("product");
+
+  const [carts, setCarts] = useState([]);
+  console.log(carts);
+
   return (
     <>
       <NavBar></NavBar>
@@ -51,8 +58,22 @@ function App() {
           </a>
         </div>
       </div> */}
-      <TabsToChangeColor></TabsToChangeColor>
-      <Productsp modelPromise={modelPromise}></Productsp>
+      <TabsToChangeColor
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      ></TabsToChangeColor>
+
+      {activeTab === "product" ? (
+        <Productsp
+          modelPromise={modelPromise}
+          carts={carts}
+          setCarts={setCarts}
+        ></Productsp>
+      ) : null}
+
+      {activeTab === "cart" ? (
+        <Cart carts={carts} setCarts={setCarts}></Cart>
+      ) : null}
       <ThreeSteps></ThreeSteps>
       <Pricing></Pricing>
       {/* Second-last Footer */}

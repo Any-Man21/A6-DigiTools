@@ -1,13 +1,14 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 
-const ProductspCard = ({ Productsp }) => {
+const ProductspCard = ({ Productsp, carts, setCarts }) => {
   const { name, description, price, period, tag, features, icon } = Productsp;
 
   const [bought, setBought] = useState(false);
 
   const handleBuy = () => {
     setBought(true);
+    setCarts([...carts, Productsp]);
   };
 
   return (
