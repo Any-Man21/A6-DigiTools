@@ -1,4 +1,5 @@
 import React from "react";
+import bannerImg from "../assets/banner.png";
 
 const Banner = () => {
   return (
@@ -58,7 +59,7 @@ const Banner = () => {
             <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div class="relative w-full max-w-125 lg:max-w-none aspect-10/9">
                 <img
-                  src="/src/assets/banner.png"
+                  src={bannerImg}
                   alt="Hand interacting with AI data hologram"
                   class="absolute inset-0 w-full h-full object-cover rounded-3xl"
                   loading="lazy"
