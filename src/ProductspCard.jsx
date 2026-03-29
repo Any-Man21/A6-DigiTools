@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductspCard = ({ Productsp, carts, setCarts }) => {
   const { name, description, price, period, tag, features, icon } = Productsp;
@@ -8,7 +9,25 @@ const ProductspCard = ({ Productsp, carts, setCarts }) => {
 
   const handleBuy = () => {
     setBought(true);
+    const isFound = carts.find((item) => item.id === Productsp.id);
+    if (isFound) {
+      toast.info(`${name} is already in the cart!`, {
+        position: "top-right",
+        autoClose: 1000,
+      });
+      return;
+    }
+
     setCarts([...carts, Productsp]);
+    toast.success(`${name} added to cart!`, {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (

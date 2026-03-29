@@ -1,13 +1,32 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cart = ({ carts, setCarts }) => {
   const handleRemove = (item) => {
     const updatedCarts = carts.filter((i) => i.id !== item.id);
     setCarts(updatedCarts);
+    toast.error(`${item.name} removed from cart!`, {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const handleCheckout = () => {
     setCarts([]);
+    toast.success("Checkout successful! Thank you for your purchase.", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (

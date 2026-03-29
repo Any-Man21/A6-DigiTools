@@ -7,6 +7,8 @@ import NavBar from "./components/NavBar";
 import Productsp from "./Productsp";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import ThreeSteps from "./components/ThreeSteps";
+import Pricing from "./components/Pricing";
 
 const getModels = async () => {
   const res = await fetch("/models.json");
@@ -42,6 +44,9 @@ function App() {
       ) : (
         <Cart carts={carts} setCarts={setCarts} />
       )}
+
+      <ThreeSteps />
+      <Pricing> </Pricing>
 
       <Footer />
     </>
