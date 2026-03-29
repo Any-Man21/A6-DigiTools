@@ -1,6 +1,15 @@
 import React from "react";
 
-const Cart = ({ carts }) => {
+const Cart = ({ carts, setCarts }) => {
+  const handleRemove = (item) => {
+    const updatedCarts = carts.filter((i) => i.id !== item.id);
+    setCarts(updatedCarts);
+  };
+
+  const handleCheckout = () => {
+    setCarts([]);
+  };
+
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mt-10">Cart Page</h1>
@@ -18,17 +27,22 @@ const Cart = ({ carts }) => {
               <img
                 src={item.icon}
                 alt=""
-                className="h-20 w-20 object-contain rounded-3xl"
+                className="h-25 w-25 object-contain rounded-3xl"
               />
             </div>
             <div>
               <h2 className="text-xl font-bold">{item.name}</h2>
-              <p>{item.description}</p>
             </div>
           </div>
           <div className="text-2xl font-bold text-yellow-500">
             ${item.price}/month
           </div>
+          <button
+            onClick={() => handleRemove(item)}
+            className="btn btn-primary rounded-full border-none hover:bg-[#5a24d1] text-white font-bold capitalize bg-red-600"
+          >
+            Remove
+          </button>
         </div>
       ))}
       <div className=" flex justify-between my-20 bg-black text-white p-5 rounded-xl mx-10">
@@ -36,7 +50,10 @@ const Cart = ({ carts }) => {
         <div>${carts.reduce((total, item) => total + item.price, 0)}/month</div>
       </div>
       <div>
-        <button className="btn btn-primary items-center w-full rounded-full border-none bg-[#6b30ea] hover:bg-[#5a24d1] text-white font-bold capitalize">
+        <button
+          onClick={handleCheckout}
+          className="btn btn-primary items-center w-full rounded-full border-none bg-[#6b30ea] hover:bg-[#5a24d1] text-white font-bold capitalize mb-15"
+        >
           Proceed to Checkout
         </button>
       </div>
